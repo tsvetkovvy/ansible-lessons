@@ -1,0 +1,8 @@
+---
+- name: Install Apache and upload my web site
+  hosts: webservers
+  become: true
+
+  vars:
+    source_file:  ./MyWebServer/index.html
+    dest_file:    /var/www/html
